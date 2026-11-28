@@ -67,8 +67,176 @@
 *::-webkit-scrollbar-corner {
   background: transparent;
 }
+
+/* TRADEVEX premium landing experience */
+:root{--tv-purple:#a855f7;--tv-cyan:#00e5ff;--tv-pink:#ff4db8;--tv-green:#00f5a0}
+[hidden]{display:none!important}
+.landing-page{min-height:100vh;overflow:hidden;background:#050509;color:#f7f4ff;position:relative}
+.landing-page:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 12% 14%,#8b27ff1b,transparent 32%),radial-gradient(ellipse at 85% 38%,#00d9ff13,transparent 31%),radial-gradient(ellipse at 52% 95%,#ff36b30b,transparent 30%);z-index:0}
+.landing-page>*{position:relative;z-index:1}
+.landing-nav{height:88px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,4vw,70px);border-bottom:1px solid #ffffff14;background:#08070bc9;backdrop-filter:blur(20px);position:sticky;top:0;z-index:20}
+.landing-brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none;font-size:23px;font-weight:850;letter-spacing:-.8px}
+.landing-brand strong{background:linear-gradient(100deg,#c084fc,#5ee7ff,#ff73c8);background-clip:text;color:transparent}
+.landing-logo{width:39px;height:39px;border-radius:50%;display:grid;place-items:center;font-weight:950;font-size:19px;color:#fff;border:1px solid #9c4dff;box-shadow:0 0 18px #a855f777,inset 0 0 14px #00e5ff44;background:radial-gradient(circle at 35% 30%,#5a1a86,#090711 70%)}
+.landing-logo span{color:#00e5ff}
+.landing-links{display:flex;align-items:center;gap:10px}
+.landing-links a{color:#9e9ba9;text-decoration:none;padding:12px 17px;border-radius:10px;transition:.2s}
+.landing-links a:hover,.landing-links a.active{color:#fff;background:#ffffff0d;box-shadow:inset 0 -2px #bb65ff}
+.landing-actions{display:flex;align-items:center;gap:20px}
+.landing-login{border:0;background:none;color:#c5c0d0;font-size:15px;cursor:pointer}
+.neon-button{border:1px solid #a855f7;background:linear-gradient(110deg,#7425bd,#9b35ee 55%,#6532db);color:white;border-radius:15px;padding:14px 23px;font-weight:800;cursor:pointer;box-shadow:0 0 22px #9b35ee77,0 0 50px #7b2bdc2b;transition:transform .2s,box-shadow .2s}
+.neon-button:hover{transform:translateY(-2px);box-shadow:0 0 28px #bd65ffbb,0 0 60px #00d9ff33}
+.neon-button span{color:#aaf8ff}
+.landing-hero{min-height:700px;max-width:1740px;margin:auto;padding:78px clamp(24px,5vw,82px) 90px;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(420px,.95fr);gap:4vw;align-items:center;position:relative}
+.hero-grid-glow{position:absolute;inset:0;pointer-events:none;opacity:.33;background-image:linear-gradient(#a855f711 1px,transparent 1px),linear-gradient(90deg,#a855f711 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,black,transparent 90%)}
+.hero-copy{position:relative;z-index:2}
+.eyebrow-pill{display:inline-flex;align-items:center;gap:10px;border:1px solid #ffffff20;background:#ffffff08;border-radius:30px;padding:10px 16px;color:#d0c5dc;font-size:11px;letter-spacing:3px;font-weight:800}
+.eyebrow-pill i,.proof-dot{width:8px;height:8px;border-radius:50%;background:#b75cff;box-shadow:0 0 12px #b75cff;display:inline-block}
+.eyebrow-pill b,.hero-proof b{color:#756d81}
+.hero-locations{display:inline-block;margin:0 0 0 16px;color:#6e687a;font-size:10px;letter-spacing:3px}
+.landing-hero h1{font-size:clamp(56px,7.2vw,112px);line-height:.99;letter-spacing:-.075em;margin:48px 0 28px;font-weight:850;max-width:800px}
+.landing-hero h1 em,.landing-features h2 em,.landing-bottom h2 em{font-family:Georgia,serif;font-weight:500;letter-spacing:-.07em;background:linear-gradient(100deg,#c15cff,#6c9dff 52%,#54eaff);background-clip:text;color:transparent}
+.hero-dash{color:#c35cff;text-shadow:0 0 22px #c35cff}
+.hero-description{font-size:clamp(16px,1.4vw,20px);line-height:1.75;color:#aaa4b5;max-width:680px}
+.hero-cta{display:flex;align-items:center;gap:14px;margin-top:32px;flex-wrap:wrap}
+.neon-button-large{padding:17px 28px;font-size:15px}
+.outline-button{border:1px solid #ffffff2b;background:#ffffff05;color:#e4dfea;border-radius:13px;padding:16px 21px;text-decoration:none;cursor:pointer}
+.outline-button:hover{border-color:#00e5ff88;box-shadow:0 0 20px #00e5ff22}
+.outline-button span{color:#00e5ff;margin-left:12px}
+.hero-proof{margin-top:34px;color:#777184;font-size:9px;letter-spacing:2px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.proof-dot{background:#00f5a0;box-shadow:0 0 12px #00f5a0}
+.hero-terminal{position:relative;z-index:2;border:1px solid #a855f7a6;border-radius:22px;background:linear-gradient(145deg,#100b19f2,#050509f5 60%);box-shadow:0 0 50px #9b35ee24,0 0 90px #00e5ff0d;overflow:hidden;transform:perspective(1200px) rotateY(-4deg);animation:terminalFloat 7s ease-in-out infinite}
+@keyframes terminalFloat{0%,100%{transform:perspective(1200px) rotateY(-4deg) translateY(0)}50%{transform:perspective(1200px) rotateY(-2deg) translateY(-10px)}}
+.terminal-top{display:flex;align-items:center;gap:13px;padding:20px;border-bottom:1px solid #ffffff15}
+.coin-icon{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:#08050d;background:linear-gradient(135deg,#ffd35b,#ff8b2e);font-size:22px;font-weight:900;box-shadow:0 0 20px #ff9d3944}
+.terminal-top b,.terminal-top small{display:block}.terminal-top b{font-size:15px}.terminal-top small{color:#82788d;font-size:9px;letter-spacing:1.6px;margin-top:3px}
+.market-open{margin-left:auto;border:1px solid #00f5a055;color:#00f5a0;padding:7px 10px;border-radius:6px;font-size:9px;letter-spacing:1.5px;white-space:nowrap}
+.market-open i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#00f5a0;margin-right:6px;box-shadow:0 0 9px #00f5a0}
+.terminal-chart-label{display:flex;justify-content:space-between;padding:18px 20px 0;color:#8c8299;font-size:9px;letter-spacing:2px}
+.chart-live{color:#00e5ff}
+.spark-chart{height:245px;padding:10px 12px 0;background:repeating-linear-gradient(to bottom,transparent 0,transparent 44px,#ffffff0b 45px),repeating-linear-gradient(to right,transparent 0,transparent 59px,#ffffff08 60px)}
+.spark-chart svg{width:100%;height:100%;overflow:visible}
+.terminal-stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #ffffff16;border-bottom:1px solid #ffffff16}
+.terminal-stats div{padding:17px 12px;text-align:center;border-right:1px solid #ffffff12}.terminal-stats div:last-child{border:0}
+.terminal-stats small,.terminal-stats b{display:block}.terminal-stats small{color:#82788d;font-size:9px;letter-spacing:1.5px}.terminal-stats b{font-size:14px;margin-top:7px;color:#e8e1ef}
+.terminal-bottom{display:flex;justify-content:space-around;gap:8px;padding:15px 8px;color:#a99db5;font-size:9px;letter-spacing:1.2px;flex-wrap:wrap}
+.floating-symbol{position:absolute;color:#a855f7;opacity:.13;font-size:150px;line-height:1;pointer-events:none}.symbol-btc{top:15px;left:10%;transform:rotate(15deg)}.symbol-chart{bottom:15px;right:46%;font-size:100px;color:#00e5ff}
+.floating-orb{position:absolute;width:210px;height:210px;border-radius:50%;filter:blur(85px);opacity:.18;pointer-events:none}.orb-one{background:#9b35ee;right:15%;top:10%}.orb-two{background:#00d9ff;left:28%;bottom:0}
+.landing-facts,.landing-features{max-width:1500px;margin:0 auto;padding:85px clamp(24px,5vw,82px)}
+.section-kicker{color:#b66aff;font-size:10px;font-weight:850;letter-spacing:3px}.section-kicker span{color:#00e5ff;margin-left:7px}
+.landing-facts h2,.landing-features h2,.landing-bottom h2{font-size:clamp(35px,4.2vw,60px);letter-spacing:-.055em;line-height:1.08;margin:14px 0}
+.section-intro,.landing-features p,.landing-bottom p{color:#9992a5;font-size:16px;line-height:1.7}
+.fact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:35px}
+.fact-card{padding:24px;border:1px solid #ffffff19;border-radius:17px;background:#ffffff06;min-height:220px;transition:.25s}
+.fact-card:hover{transform:translateY(-5px);background:#ffffff0a}
+.fact-icon{font-size:25px}.fact-card h3{font-size:18px;margin:18px 0 8px}.fact-card p{font-size:13px;line-height:1.7;color:#9d96a8;min-height:65px}.fact-card small{font-size:9px;letter-spacing:1.5px;color:#81778f}
+.fact-purple{box-shadow:inset 0 2px #b45cff55}.fact-purple .fact-icon{color:#c27aff;text-shadow:0 0 15px #a855f7}
+.fact-cyan{box-shadow:inset 0 2px #00e5ff55}.fact-cyan .fact-icon{color:#00e5ff;text-shadow:0 0 15px #00e5ff}
+.fact-pink{box-shadow:inset 0 2px #ff4db855}.fact-pink .fact-icon{color:#ff6bc5;text-shadow:0 0 15px #ff4db8}
+.fact-green{box-shadow:inset 0 2px #00f5a055}.fact-green .fact-icon{color:#00f5a0;text-shadow:0 0 15px #00f5a0}
+.market-note{margin-top:22px;padding:13px 16px;border:1px solid #ffffff15;border-radius:10px;color:#8d8499;font-size:11px}.market-note span{color:#00e5ff;margin-right:8px}
+.landing-features{display:grid;grid-template-columns:.8fr 1.2fr;gap:7vw;align-items:center;border-top:1px solid #ffffff12;border-bottom:1px solid #ffffff12}
+.landing-features p{max-width:440px;margin-bottom:25px}
+.feature-mosaic{display:grid;grid-template-columns:1.1fr .9fr;gap:13px}
+.mosaic-card{border:1px solid #ffffff1b;border-radius:16px;background:linear-gradient(145deg,#171023,#09070e);padding:20px;min-height:180px;overflow:hidden}
+.mosaic-card span{display:block;color:#a78bbd;font-size:9px;letter-spacing:2px}.mosaic-card b{display:block;font-size:19px;margin-top:16px}.mosaic-card small{color:#9a91a5;font-size:11px}.mosaic-large{grid-row:span 2;min-height:375px;box-shadow:inset 0 2px #a855f766}.mosaic-cyan{box-shadow:inset 0 2px #00e5ff66}.mosaic-pink{box-shadow:inset 0 2px #ff4db866}
+.heat-tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:28px}.heat-tiles i{height:42px;border-radius:5px;background:#00e5ff55}.heat-tiles i:nth-child(3n){background:#ff4db855}.heat-tiles i:nth-child(4n){background:#00f5a055}.heat-tiles i:nth-child(5n){background:#a855f777}
+.mini-bars{height:52px;display:flex;align-items:end;gap:7px;margin-top:20px}.mini-bars i{width:12%;border-radius:4px 4px 0 0;background:linear-gradient(#00e5ff,#a855f7);height:40%}.mini-bars i:nth-child(2){height:70%}.mini-bars i:nth-child(3){height:55%}.mini-bars i:nth-child(4){height:95%}.mini-bars i:nth-child(5){height:64%}.mini-bars i:nth-child(6){height:82%}.mini-bars i:nth-child(7){height:100%}
+.mini-line{margin-top:22px;color:#ff72c7;font-size:22px}.mini-line b{display:inline;color:#aa9eb4;font-size:9px;letter-spacing:1px}
+.landing-bottom{text-align:center;padding:100px 20px 110px;position:relative;overflow:hidden}.landing-bottom h2{font-size:clamp(42px,6vw,75px)}.landing-bottom p{max-width:570px;margin:0 auto}.bottom-glow{position:absolute;width:450px;height:220px;background:#9b35ee;filter:blur(140px);opacity:.18;left:calc(50% - 225px);top:30px;pointer-events:none}.centered{justify-content:center}
+.landing-footer{display:flex;justify-content:space-between;gap:15px;padding:25px clamp(24px,5vw,82px);border-top:1px solid #ffffff13;color:#777184;font-size:10px;letter-spacing:.6px}
+.intro-loader{position:fixed;inset:0;z-index:1000;background:#050509;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:13px;transition:opacity .7s,visibility .7s}
+.intro-loader.done{opacity:0;visibility:hidden;pointer-events:none}
+.loader-mark{font-size:58px;font-weight:950;color:#fff;text-shadow:0 0 22px #a855f7}.loader-mark span{color:#00e5ff}
+.loader-name{font-weight:900;letter-spacing:8px;font-size:14px}.loader-name span{color:#b66aff}
+.loader-track{width:180px;height:3px;background:#ffffff19;border-radius:9px;overflow:hidden;margin-top:8px}.loader-track i{display:block;width:40%;height:100%;background:linear-gradient(90deg,#a855f7,#00e5ff,#ff4db8);box-shadow:0 0 12px #a855f7;animation:loaderProgress 1.45s ease forwards}
+.intro-loader small{font-size:8px;letter-spacing:2px;color:#777184}
+@keyframes loaderProgress{to{width:100%}}
+/* Dedicated, full-screen authentication stage */
+#loginModal.modal-backdrop{position:fixed;inset:0;z-index:100;background:radial-gradient(ellipse at 20% 20%,#7425bd33,transparent 40%),radial-gradient(ellipse at 85% 75%,#00d9ff1b,transparent 38%),#050509;backdrop-filter:blur(18px);padding:22px}
+#loginModal .login-modal{width:min(460px,100%);border:1px solid #a855f777;border-radius:22px;background:linear-gradient(145deg,#171024,#09080f 65%);box-shadow:0 0 55px #9b35ee32,0 0 90px #00d9ff0d;padding:32px}
+#loginModal .brandmark{border-color:#a855f7;color:#d6a4ff;box-shadow:0 0 22px #a855f766}
+#loginModal .login-modal h2 span{background:linear-gradient(90deg,#c084fc,#00e5ff,#ff4db8);background-clip:text;color:transparent!important}
+#loginModal .field input{background:#08070e;border-color:#49315d}
+#loginModal .field input:focus{border-color:#00e5ff;box-shadow:0 0 0 3px #00e5ff16}
+#loginModal .primary-btn{background:linear-gradient(100deg,#7927c7,#9a36e8,#5438ce);border-color:#ad6aff;box-shadow:0 0 24px #9b35ee55}
+#loginModal .tab.active{background:#32134e;border-color:#a855f7;color:#fff}
+#loginModal .demo-note{background:#171323;border-color:#51366c;color:#c3b2d4!important}
+@media(max-width:1050px){.landing-hero{grid-template-columns:1fr;gap:55px}.hero-terminal{max-width:760px;width:100%;margin:auto}.landing-hero h1{font-size:clamp(58px,10vw,100px)}.landing-features{grid-template-columns:1fr;gap:35px}.fact-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.landing-nav{height:72px;padding:0 16px}.landing-brand{font-size:19px}.landing-logo{width:34px;height:34px}.landing-links{display:none}.landing-actions{gap:12px}.landing-login{font-size:13px}.landing-actions .neon-button{padding:11px 14px;font-size:12px}.landing-hero{padding:55px 20px 65px;min-height:auto}.landing-hero h1{font-size:clamp(51px,14vw,78px);margin:34px 0 22px}.hero-locations{display:block;margin:12px 0 0}.hero-description{font-size:15px}.hero-proof{font-size:8px;line-height:2}.hero-terminal{transform:none;animation:none}.terminal-top{padding:14px}.market-open{font-size:7px}.spark-chart{height:170px}.terminal-stats b{font-size:11px}.terminal-stats small{font-size:7px}.terminal-bottom{font-size:7px}.landing-facts,.landing-features{padding:65px 20px}.fact-grid{grid-template-columns:1fr;gap:11px}.fact-card{min-height:0}.fact-card p{min-height:0}.feature-mosaic{grid-template-columns:1fr}.mosaic-large{grid-row:auto;min-height:250px}.landing-bottom{padding:75px 20px}.landing-footer{flex-direction:column;line-height:1.8}.floating-symbol{font-size:95px}.intro-loader{gap:10px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
 </style></head>
 <body>
+<div id="landingPage" class="landing-page">
+  <header class="landing-nav">
+    <a class="landing-brand" href="#" aria-label="TRADEVEX home">
+      <span class="landing-logo">T<span>V</span></span>
+      <span>Trade<strong>vex</strong></span>
+    </a>
+    <nav class="landing-links" aria-label="Main navigation">
+      <a class="active" href="#landingHome">Home</a>
+      <a href="#landingFeatures">Platform</a>
+      <a href="#landingFacts">Market facts</a>
+      <a href="#landingDemo">Demo</a>
+    </nav>
+    <div class="landing-actions">
+      <button class="landing-login" id="landingLogin">Log in</button>
+      <button class="neon-button" id="landingSignup"><span>✦</span> Get Started</button>
+    </div>
+  </header>
+  <main id="landingHome">
+    <section class="landing-hero">
+      <div class="hero-grid-glow"></div>
+      <div class="hero-copy">
+        <div class="eyebrow-pill"><i></i> NEURAL MARKET ENGINE <b>·</b> V4.7</div>
+        <div class="hero-locations">NSE / BSE / GLOBAL MARKETS</div>
+        <h1>The engine<br>behind <em>smarter</em><br>markets<span class="hero-dash">_</span></h1>
+        <p class="hero-description">Market intelligence built for curious minds. Explore powerful analytics, understand market movements and make more informed decisions.</p>
+        <div class="hero-cta">
+          <button class="neon-button neon-button-large" id="heroGetStarted">✦ Get Started</button>
+          <a class="outline-button" href="#landingDemo">Explore the platform <span>↗</span></a>
+        </div>
+        <div class="hero-proof"><span class="proof-dot"></span> MARKET INSIGHTS <b>·</b> DATA-DRIVEN TOOLS <b>·</b> BUILT FOR EXPLORATION</div>
+      </div>
+      <div class="hero-terminal" id="landingDemo">
+        <div class="terminal-top"><span class="coin-icon">₿</span><div><b>MARKET OVERVIEW</b><small>TRADEVEX ANALYTICS TERMINAL</small></div><span class="market-open"><i></i> PLATFORM PREVIEW</span></div>
+        <div class="terminal-chart-label"><span>MARKET MOMENTUM</span><span class="chart-live">● SAMPLE VISUAL</span></div>
+        <div class="spark-chart">
+          <svg viewBox="0 0 620 230" preserveAspectRatio="none" aria-label="Decorative market chart preview">
+            <defs><linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9b4dff" stop-opacity=".32"/><stop offset="1" stop-color="#9b4dff" stop-opacity="0"/></linearGradient><linearGradient id="chartLine"><stop stop-color="#00e5ff"/><stop offset=".5" stop-color="#a855f7"/><stop offset="1" stop-color="#ff4db8"/></linearGradient></defs>
+            <path d="M0 180 L35 166 65 174 95 130 125 145 155 105 185 122 215 80 245 96 275 58 305 76 335 43 365 70 395 52 425 88 455 67 485 94 515 58 545 74 575 38 620 48 L620 230 L0 230Z" fill="url(#chartFill)"/>
+            <path d="M0 180 L35 166 65 174 95 130 125 145 155 105 185 122 215 80 245 96 275 58 305 76 335 43 365 70 395 52 425 88 455 67 485 94 515 58 545 74 575 38 620 48" fill="none" stroke="url(#chartLine)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="terminal-stats"><div><small>MARKET COVERAGE</small><b>NSE · BSE</b></div><div><small>ANALYTICS</small><b>Multi-sector</b></div><div><small>WORKSPACE</small><b>Personal</b></div></div>
+        <div class="terminal-bottom"><span>HEATMAP</span><span>STOCK SCREENER</span><span>PORTFOLIO</span><span>ALERTS</span></div>
+      </div>
+      <div class="floating-symbol symbol-btc">₿</div><div class="floating-symbol symbol-chart">↗</div><div class="floating-orb orb-one"></div><div class="floating-orb orb-two"></div>
+    </section>
+    <section class="landing-facts" id="landingFacts">
+      <div class="section-kicker">MARKET KNOWLEDGE <span>✦</span></div>
+      <h2>See beyond the numbers.</h2>
+      <p class="section-intro">A smarter starting point for understanding the markets.</p>
+      <div class="fact-grid">
+        <article class="fact-card fact-purple"><span class="fact-icon">⌁</span><h3>Price movement</h3><p>Track how prices change over time and explore trends across selected market instruments.</p><small>MARKET BASICS · 01</small></article>
+        <article class="fact-card fact-cyan"><span class="fact-icon">▦</span><h3>Market breadth</h3><p>Compare advancing, declining and unchanged stocks to understand wider market participation.</p><small>MARKET BASICS · 02</small></article>
+        <article class="fact-card fact-pink"><span class="fact-icon">◈</span><h3>Risk &amp; reward</h3><p>Learn why potential returns should always be considered alongside uncertainty and risk.</p><small>MARKET BASICS · 03</small></article>
+        <article class="fact-card fact-green"><span class="fact-icon">⌗</span><h3>Sector trends</h3><p>Explore how companies are grouped into sectors and how sector performance can differ.</p><small>MARKET BASICS · 04</small></article>
+      </div>
+      <div class="market-note"><span>ⓘ</span> Market figures and charts inside the dashboard are sourced from their displayed providers. This landing page uses illustrative visuals, not fabricated live quotes.</div>
+    </section>
+    <section class="landing-features" id="landingFeatures">
+      <div><div class="section-kicker">YOUR MARKET WORKSPACE</div><h2>Everything in one<br><em>connected view.</em></h2><p>Move from broad market context to individual stock research with tools designed to work together.</p><button class="neon-button" id="featuresGetStarted">Explore TRADEVEX →</button></div>
+      <div class="feature-mosaic"><div class="mosaic-card mosaic-large"><span>01 / DISCOVER</span><b>Market heatmaps</b><small>Visualise sector and stock activity</small><div class="heat-tiles"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div class="mosaic-card mosaic-cyan"><span>02 / ANALYSE</span><b>Stock explorer</b><small>Charts, comparisons &amp; trends</small><div class="mini-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div class="mosaic-card mosaic-pink"><span>03 / ORGANISE</span><b>Portfolio &amp; alerts</b><small>Keep track of your research</small><div class="mini-line">↗ <b>PERSONAL WORKSPACE</b></div></div></div>
+    </section>
+    <section class="landing-bottom" id="landingSignupSection"><div class="bottom-glow"></div><div class="section-kicker">START EXPLORING</div><h2>Your market journey<br>starts <em>here.</em></h2><p>Create an account or log in to enter your personal TRADEVEX workspace.</p><div class="hero-cta centered"><button class="neon-button neon-button-large" id="bottomSignup">✦ Create your account</button><button class="outline-button" id="bottomLogin">I already have an account</button></div></section>
+  </main>
+  <footer class="landing-footer"><span>© 2026 TRADEVEX · NMS TECH</span><span>Independent market information workspace · Not a broker</span></footer>
+  <div class="intro-loader" id="introLoader"><div class="loader-mark">T<span>V</span></div><div class="loader-name">TRADE<span>VEX</span></div><div class="loader-track"><i></i></div><small>INITIALISING MARKET INTELLIGENCE</small></div>
+</div>
+
+<div id="appRoot" hidden>
 <div class="mobilehead"><div class="brand"><div class="brandmark" aria-label="TRADEVEX logo"><svg viewBox="0 0 64 64" width="27" height="27" aria-hidden="true"><path d="M7 13h19l13 17 17-20-3 20-18 22-17-22z" fill="#1264c5"/><path d="M25 42 56 9l-5 24-21 23z" fill="#16c9ed"/><path d="m31 56 16-20 9-27-5 25z" fill="#21d6a0"/></svg></div><div><b>TRADEVEX</b><small>MARKET INTELLIGENCE</small></div></div><button onclick="document.getElementById('navMobile').hidden=!document.getElementById('navMobile').hidden">☰ MENU</button></div>
 <div id="navMobile" hidden style="position:sticky;top:62px;z-index:4;background:#09111a;border-bottom:1px solid #1b2b39;padding:10px 15px"><div class="nav" style="display:grid;grid-template-columns:1fr 1fr"><a href="#movers">↗ Market Movers</a><a href="#eod-market">▤ Gainers & Losers</a><a href="#heatmap">▧ Market Heatmap</a><a href="#sectors">◉ Sector Performance</a><a href="#charts">⌘ Stock Explorer</a><a href="#compare">⇄ Compare Stocks</a><a href="#watchlist">☆ Watchlist</a><a href="#portfolio">▣ Virtual Portfolio</a><a href="#alerts">◉ Price Alerts</a><a href="#calendar">▦ IPO & Earnings</a><a href="#news">▤ Market News</a><a href="#assistant">✦ AI Assistant</a><a href="#about">ⓘ About</a></div></div>
 <div class="shell"><aside class="sidebar"><div class="brand"><div class="brandmark" aria-label="TRADEVEX logo"><svg viewBox="0 0 64 64" width="27" height="27" aria-hidden="true"><path d="M7 13h19l13 17 17-20-3 20-18 22-17-22z" fill="#1264c5"/><path d="M25 42 56 9l-5 24-21 23z" fill="#16c9ed"/><path d="m31 56 16-20 9-27-5 25z" fill="#21d6a0"/></svg></div><div><b>TRADEVEX</b><small>MARKET INTELLIGENCE</small></div></div><div class="navlabel">MARKET WORKSPACE</div><nav class="nav"><a href="#movers"><span class="ico">↗</span> Market Movers</a><a href="#eod-market"><span class="ico">▤</span> Gainers & Losers</a><a href="#heatmap"><span class="ico">▧</span> Market Heatmap</a><a href="#sectors"><span class="ico">◉</span> Sector Performance</a><a href="#charts"><span class="ico">⌘</span> Stock Explorer</a><a href="#compare"><span class="ico">⇄</span> Compare Stocks</a><a href="#watchlist"><span class="ico">☆</span> Watchlist</a><a href="#portfolio"><span class="ico">▣</span> Virtual Portfolio</a><a href="#alerts"><span class="ico">◉</span> Price Alerts</a><a href="#calendar"><span class="ico">▦</span> IPO & Earnings</a><a href="#news"><span class="ico">▤</span> Market News</a><a href="#assistant"><span class="ico">✦</span> AI Assistant</a></nav><div class="navlabel" style="margin-top:16px">INFORMATION</div><nav class="nav"><a href="#about"><span class="ico">ⓘ</span> About TRADEVEX</a></nav><div class="sidefoot">NMS TECH · TRADEVEX<br>Market data by TradingView</div></aside>
@@ -93,12 +261,27 @@
 <section class="section" id="assistant"><div class="sectionhead"><div><h2>AI market assistant</h2><p>Ask basic questions about market terms and your loaded EOD snapshot</p></div><badge class="tab active">AI CONNECTION · NEXT SETUP</badge></div><div class="card assistant-card"><div id="assistantLog" class="assistant-log"><div class="assistant-msg bot">Hi! I can explain market terms and summarize the latest NSE EOD snapshot loaded in this page. I am a local demo assistant, not a connected AI model or financial adviser.</div></div><form id="assistantForm" class="assistant-form"><input id="assistantInput" class="search" style="flex:1;width:auto" placeholder="Ask: What are gainers? How many stocks advanced?" required><button class="tab active" type="submit">Ask ↗</button></form><div class="quick-prompts"><button class="tab" data-prompt="Summarize today's market breadth">Market breadth</button><button class="tab" data-prompt="Explain what a market cap is">Market cap</button><button class="tab" data-prompt="What is the difference between gainers and losers?">Gainers vs losers</button></div></div></section>
 <div class="disclaimer" id="marketDisclaimer">Market information is provided through third-party embedded widgets and may be delayed, incomplete or unavailable for some symbols and exchanges. This is an informational dashboard, not investment advice. Verify quotes with the exchange or your broker before making financial decisions.</div>
 <section class="section" id="about"><div class="sectionhead"><div><h2>About TRADEVEX</h2><p>One screen. A clearer view of the markets.</p></div></div><div class="card"><div class="eyebrow">BUILT BY NMS TECH</div><h3 style="margin:7px 0">Market intelligence, simplified.</h3><p class="muted" style="margin:0">TRADEVEX is an independent market-monitoring interface concept. It brings together embedded charts, index overviews, market movers and heatmaps in a single responsive workspace. Market data and widget functionality are supplied by TradingView and their data partners.</p></div></section>
-<div class="modal-backdrop" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle"><div class="login-modal"><button class="modal-close" id="loginClose" aria-label="Close">×</button><div class="brandmark" aria-label="TRADEVEX logo"><svg viewBox="0 0 64 64" width="27" height="27" aria-hidden="true"><path d="M7 13h19l13 17 17-20-3 20-18 22-17-22z" fill="#1264c5"/><path d="M25 42 56 9l-5 24-21 23z" fill="#16c9ed"/><path d="m31 56 16-20 9-27-5 25z" fill="#21d6a0"/></svg></div><div class="eyebrow" style="margin-top:14px">SECURE NMS TECH ACCOUNT</div><h2 id="loginTitle">Welcome to <span style="color:var(--cyan)">TRADEVEX</span></h2><p id="authSubtitle">Sign in to sync your watchlist across devices.</p><div class="tabs" style="margin-bottom:12px"><button class="tab active" type="button" id="authSignInTab">Sign in</button><button class="tab" type="button" id="authSignUpTab">Create account</button></div><form id="loginForm"><div class="field" id="authNameField" hidden><label for="loginName">Your name</label><input id="loginName" autocomplete="name" placeholder="Enter your name"></div><div class="field"><label for="loginEmail">Email address</label><input id="loginEmail" type="email" autocomplete="email" placeholder="you@example.com" required></div><div class="field"><label for="loginPassword">Password</label><input id="loginPassword" type="password" autocomplete="current-password" minlength="8" placeholder="At least 8 characters" required></div><button class="primary-btn" id="authSubmit" type="submit">Sign in securely →</button></form><p id="authMessage" class="muted" role="status" style="margin-top:12px;min-height:18px"></p><p class="demo-note">Secure authentication is provided by Supabase. First add your Supabase project URL and public anon key in this file, then run the included SQL setup. Never put a service-role key in this website.</p></div></div>
+
 <footer class="footer"><span>© 2026 TRADEVEX · NMS TECH</span><span>Independent market information dashboard · Not a broker</span></footer>
 </main></div>
+</div>
+<div class="modal-backdrop" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle"><div class="login-modal"><button class="modal-close" id="loginClose" aria-label="Close">×</button><div class="brandmark" aria-label="TRADEVEX logo"><svg viewBox="0 0 64 64" width="27" height="27" aria-hidden="true"><path d="M7 13h19l13 17 17-20-3 20-18 22-17-22z" fill="#1264c5"/><path d="M25 42 56 9l-5 24-21 23z" fill="#16c9ed"/><path d="m31 56 16-20 9-27-5 25z" fill="#21d6a0"/></svg></div><div class="eyebrow" style="margin-top:14px">SECURE NMS TECH ACCOUNT</div><h2 id="loginTitle">Welcome to <span style="color:var(--cyan)">TRADEVEX</span></h2><p id="authSubtitle">Sign in to sync your watchlist across devices.</p><div class="tabs" style="margin-bottom:12px"><button class="tab active" type="button" id="authSignInTab">Sign in</button><button class="tab" type="button" id="authSignUpTab">Create account</button></div><form id="loginForm"><div class="field" id="authNameField" hidden><label for="loginName">Your name</label><input id="loginName" autocomplete="name" placeholder="Enter your name"></div><div class="field"><label for="loginEmail">Email address</label><input id="loginEmail" type="email" autocomplete="email" placeholder="you@example.com" required></div><div class="field"><label for="loginPassword">Password</label><input id="loginPassword" type="password" autocomplete="current-password" minlength="8" placeholder="At least 8 characters" required></div><button class="primary-btn" id="authSubmit" type="submit">Sign in securely →</button></form><p id="authMessage" class="muted" role="status" style="margin-top:12px;min-height:18px"></p><p class="demo-note">Secure authentication is provided by Supabase. First add your Supabase project URL and public anon key in this file, then run the included SQL setup. Never put a service-role key in this website.</p></div></div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
+
+// Landing, intro and authenticated-dashboard stage controller.
+const landingPage=document.getElementById('landingPage');
+const appRoot=document.getElementById('appRoot');
+function showLanding(){landingPage.hidden=false;appRoot.hidden=true;document.getElementById('loginModal').classList.remove('show');window.scrollTo(0,0)}
+function showDashboard(){landingPage.hidden=true;appRoot.hidden=false;document.getElementById('loginModal').classList.remove('show');window.scrollTo(0,0)}
+function openAuth(mode){showLanding();document.getElementById('loginModal').classList.add('show');setAuthMode(mode);document.getElementById('loginEmail').focus()}
+document.getElementById('landingLogin').addEventListener('click',()=>openAuth('signin'));
+['landingSignup','heroGetStarted','featuresGetStarted','bottomSignup'].forEach(id=>document.getElementById(id).addEventListener('click',()=>openAuth('signup')));
+document.getElementById('bottomLogin').addEventListener('click',()=>openAuth('signin'));
+document.querySelectorAll('.landing-links a').forEach(a=>a.addEventListener('click',()=>{document.querySelectorAll('.landing-links a').forEach(x=>x.classList.toggle('active',x===a))}));
+window.addEventListener('load',()=>{const loader=document.getElementById('introLoader');setTimeout(()=>loader.classList.add('done'),1450)});
+
 function tick(){document.getElementById('clock').textContent=new Intl.DateTimeFormat('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).format(new Date())+' IST'}tick();setInterval(tick,1000);
 document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>{document.querySelectorAll('.nav a').forEach(x=>x.classList.remove('active'));a.classList.add('active');document.getElementById('navMobile').hidden=true}));
 function mountWidget(containerId,scriptName,config){const box=document.getElementById(containerId);box.innerHTML='<div class="tradingview-widget-container__widget"></div>';const s=document.createElement('script');s.src='https://s3.tradingview.com/external-embedding/'+scriptName+'.js';s.async=true;s.text=JSON.stringify(config);box.appendChild(s)}
@@ -119,14 +302,14 @@ const loginModal=document.getElementById('loginModal'),loginOpen=document.getEle
 const authMessage=document.getElementById('authMessage');
 function setAuthMessage(message,isError=false){authMessage.textContent=message;authMessage.style.color=isError?'var(--red)':'var(--green)'}
 function setAuthMode(mode){authMode=mode;const signup=mode==='signup';document.getElementById('authNameField').hidden=!signup;document.getElementById('loginName').required=signup;document.getElementById('authSignInTab').classList.toggle('active',!signup);document.getElementById('authSignUpTab').classList.toggle('active',signup);document.getElementById('authSubmit').textContent=signup?'Create secure account →':'Sign in securely →';document.getElementById('authSubtitle').textContent=signup?'Create an account to keep your watchlist synced.':'Sign in to sync your watchlist across devices.';document.getElementById('loginPassword').autocomplete=signup?'new-password':'current-password';setAuthMessage('')}
-function showLogin(){loginModal.classList.add('show');setAuthMode('signin');document.getElementById('loginEmail').focus();if(!supabaseClient)setAuthMessage('Supabase is not configured yet. Add the project URL and anon key to activate accounts.',true)}
-function hideLogin(){loginModal.classList.remove('show')}
+function showLogin(){showLanding();loginModal.classList.add('show');setAuthMode('signin');document.getElementById('loginEmail').focus();if(!supabaseClient)setAuthMessage('Supabase is not configured yet. Add the project URL and anon key to activate accounts.',true)}
+function hideLogin(){loginModal.classList.remove('show');if(!currentAuthUser)showLanding()}
 loginOpen.addEventListener('click',async()=>{if(currentAuthUser&&supabaseClient){const {error}=await supabaseClient.auth.signOut();if(error){setAuthMessage(error.message,true);return}return}showLogin()});
 document.getElementById('authSignInTab').addEventListener('click',()=>setAuthMode('signin'));document.getElementById('authSignUpTab').addEventListener('click',()=>setAuthMode('signup'));
 loginClose.addEventListener('click',hideLogin);loginModal.addEventListener('click',e=>{if(e.target===loginModal)hideLogin()});document.addEventListener('keydown',e=>{if(e.key==='Escape')hideLogin()});
 function renderUser(){const greeting=document.getElementById('welcomeGreeting');if(currentAuthUser){const rawName=currentAuthUser.user_metadata?.full_name||currentAuthUser.email?.split('@')[0]||'User';const firstName=rawName.trim().split(/\\s+/)[0];const hour=Number(new Intl.DateTimeFormat('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',hour12:false}).format(new Date()));const period=hour<12?'Good morning':hour<17?'Good afternoon':'Good evening';greeting.hidden=false;document.getElementById('greetingText').textContent=period+', '+firstName;document.getElementById('userChip').style.display='flex';document.getElementById('userLabel').textContent=rawName;document.getElementById('userAvatar').textContent=firstName.charAt(0).toUpperCase();loginOpen.textContent='SIGN OUT'}else{greeting.hidden=true;document.getElementById('userChip').style.display='none';loginOpen.textContent='SIGN IN'}}
-loginForm.addEventListener('submit',async e=>{e.preventDefault();if(!supabaseClient){setAuthMessage('Setup required: configure Supabase URL + anon key and run supabase-setup.sql.',true);return}const email=document.getElementById('loginEmail').value.trim(),password=document.getElementById('loginPassword').value,name=document.getElementById('loginName').value.trim();if(password.length<8){setAuthMessage('Use a password with at least 8 characters.',true);return}document.getElementById('authSubmit').disabled=true;setAuthMessage(authMode==='signup'?'Creating your account…':'Signing in…');try{const result=authMode==='signup'?await supabaseClient.auth.signUp({email,password,options:{data:{full_name:name}}}):await supabaseClient.auth.signInWithPassword({email,password});if(result.error)throw result.error;if(authMode==='signup'&&!result.data.session){setAuthMessage('Account created. Check your email to confirm, then sign in.');return}currentAuthUser=result.data.user;renderUser();await loadCloudWatchlist();hideLogin();loginForm.reset()}catch(err){setAuthMessage(err.message||'Authentication failed.',true)}finally{document.getElementById('authSubmit').disabled=false}});
-async function initAuth(){if(!supabaseClient){document.getElementById('watchSyncStatus').textContent='Cloud sync not configured';document.getElementById('watchHelp').textContent='To enable secure accounts and cloud sync, configure Supabase and run supabase-setup.sql.';renderWatch();return}const {data:{session}}=await supabaseClient.auth.getSession();currentAuthUser=session?.user||null;renderUser();if(currentAuthUser)await loadCloudWatchlist();else renderWatch();supabaseClient.auth.onAuthStateChange(async(_event,session)=>{currentAuthUser=session?.user||null;renderUser();if(currentAuthUser){await loadCloudWatchlist()}else{watchItems=[];renderWatch();document.getElementById('watchSyncStatus').textContent='Sign in to sync'}})}
+loginForm.addEventListener('submit',async e=>{e.preventDefault();if(!supabaseClient){setAuthMessage('Setup required: configure Supabase URL + anon key and run supabase-setup.sql.',true);return}const email=document.getElementById('loginEmail').value.trim(),password=document.getElementById('loginPassword').value,name=document.getElementById('loginName').value.trim();if(password.length<8){setAuthMessage('Use a password with at least 8 characters.',true);return}document.getElementById('authSubmit').disabled=true;setAuthMessage(authMode==='signup'?'Creating your account…':'Signing in…');try{const result=authMode==='signup'?await supabaseClient.auth.signUp({email,password,options:{data:{full_name:name}}}):await supabaseClient.auth.signInWithPassword({email,password});if(result.error)throw result.error;if(authMode==='signup'&&!result.data.session){setAuthMessage('Account created. Check your email to confirm, then sign in.');return}currentAuthUser=result.data.user;renderUser();await loadCloudWatchlist();hideLogin();showDashboard();loginForm.reset()}catch(err){setAuthMessage(err.message||'Authentication failed.',true)}finally{document.getElementById('authSubmit').disabled=false}});
+async function initAuth(){if(!supabaseClient){document.getElementById('watchSyncStatus').textContent='Cloud sync not configured';document.getElementById('watchHelp').textContent='To enable secure accounts and cloud sync, configure Supabase and run supabase-setup.sql.';renderWatch();renderUser();showLanding();return}const {data:{session}}=await supabaseClient.auth.getSession();currentAuthUser=session?.user||null;renderUser();if(currentAuthUser){await loadCloudWatchlist();showDashboard()}else{renderWatch();showLanding()}supabaseClient.auth.onAuthStateChange(async(_event,session)=>{currentAuthUser=session?.user||null;renderUser();if(currentAuthUser){await loadCloudWatchlist();showDashboard()}else{watchItems=[];renderWatch();document.getElementById('watchSyncStatus').textContent='Sign in to sync';showLanding()}})}
 function normalizeWatchSymbol(raw){let sym=String(raw||'').trim().toUpperCase().replace(/\s+/g,'');if(!sym)return '';if(!sym.includes(':'))sym='NSE:'+sym;if(!/^[A-Z0-9._&-]+:[A-Z0-9._&-]{1,40}$/.test(sym))return '';return sym}
 async function loadCloudWatchlist(){if(!supabaseClient||!currentAuthUser)return;document.getElementById('watchSyncStatus').textContent='Syncing…';const {data,error}=await supabaseClient.from('watchlist').select('id,symbol').eq('user_id',currentAuthUser.id).order('created_at',{ascending:true});if(error){document.getElementById('watchSyncStatus').textContent='Sync error';document.getElementById('watchHelp').textContent='Could not load cloud watchlist: '+error.message;return}watchItems=data||[];document.getElementById('watchSyncStatus').textContent='Cloud synced';document.getElementById('watchHelp').textContent='Saved to your secure account. Sign in on another device to see the same list.';renderWatch()}
 function renderWatch(){const root=document.getElementById('watchRows');if(!currentAuthUser){root.innerHTML='<div class="empty">Sign in to use your personal cloud watchlist.</div>';return}if(!watchItems.length){root.innerHTML='<div class="empty">Your watchlist is empty. Add a symbol such as RELIANCE or NSE:RELIANCE.</div>';return}root.innerHTML=watchItems.map((item,i)=>`<div class="watch-row"><div><div class="watch-symbol">${escapeHtml(item.symbol)}</div><div class="watch-meta">Saved to your account · open chart to inspect</div></div><div class="watch-actions"><button class="mini-btn" type="button" data-watch-open="${i}">Open chart</button><button class="mini-btn" type="button" data-watch-remove="${i}">Remove</button></div></div>`).join('')}
